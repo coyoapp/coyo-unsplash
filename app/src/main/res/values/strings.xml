@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">COYO Unsplash</string>
+
+    <string name="list_label">Image list</string>
+    <string name="detail_label">Image Detail</string>
+
+</resources>
