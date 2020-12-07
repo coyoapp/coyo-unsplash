@@ -4,17 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.coyoapp.android.unsplash.data.model.Image
 import com.coyoapp.android.unsplash.databinding.FragmentImageListBinding
-import org.koin.androidx.scope.ScopeFragment
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.scope.viewModel
+import org.koin.ext.scope
 
-class ImageListFragment : ScopeFragment(), OnImageClick {
+class ImageListFragment : Fragment(), OnImageClick {
 
-    private val viewModel: ImageListViewModel by viewModel()
-    private val imageListAdapter: ImageListAdapter by inject()
+    private val viewModel: ImageListViewModel by scope.viewModel(owner = this)
+    private val imageListAdapter: ImageListAdapter by scope.inject()
 
     private lateinit var binding: FragmentImageListBinding
 

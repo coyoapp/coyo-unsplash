@@ -5,18 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import coil.ImageLoader
 import coil.request.ImageRequest
 import com.coyoapp.android.unsplash.databinding.FragmentImageDetailBinding
-import org.koin.androidx.scope.ScopeFragment
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.scope.viewModel
+import org.koin.ext.scope
 
-class ImageDetailFragment : ScopeFragment() {
+class ImageDetailFragment : Fragment() {
 
-    private val viewModel: ImageDetailViewModel by viewModel()
-    private val imageLoader: ImageLoader by inject()
+    private val viewModel: ImageDetailViewModel by scope.viewModel(owner = this)
+    private val imageLoader: ImageLoader by scope.inject()
     private val args: ImageDetailFragmentArgs by navArgs()
 
     private lateinit var binding: FragmentImageDetailBinding
