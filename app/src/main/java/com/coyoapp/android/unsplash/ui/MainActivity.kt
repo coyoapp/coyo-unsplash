@@ -11,9 +11,7 @@ import com.coyoapp.android.unsplash.R
 class MainActivity : AppCompatActivity() {
 
     private val navController by lazy {
-        (supportFragmentManager.findFragmentById(
-            R.id.nav_host_fragment
-        ) as NavHostFragment).navController
+        (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment).navController
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +29,5 @@ class MainActivity : AppCompatActivity() {
             return true
         }
         return true
-    }
-
-    companion object {
-        const val KEY_IMAGE_ID = "keyImageId"
     }
 }
