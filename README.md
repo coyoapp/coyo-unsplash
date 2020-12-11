@@ -31,3 +31,10 @@ No worries! The task will be quite small and this is not meant to become an unac
 - [Retrofit](https://square.github.io/retrofit/)
 - [Coil](https://coil-kt.github.io/coil/)
 - [ConstraintLayout](https://developer.android.com/training/constraint-layout/)
+
+### Preview
+
+This is how the app looks like:
+
+![List](/screenshots/list.png)
+![Detail](/screenshots/detail.png)
