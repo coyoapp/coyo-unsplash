@@ -13,7 +13,9 @@ accessKey=someAccessK3y
 secretKey=someSecretK3y
 ```
 
-Then you should be able to start the app and run it! In case you don't want to create an account there, just reach out to us, we'll figure out a solution. 
+Then you should be able to start the app and run it! Keep in mind that the free plan of unsplash only allows you to execute 50 requests per hour!
+
+In case you don't want to create an account there, just reach out to us, we'll figure out a solution. 
 
 
 ## Interview preparation
